@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* -----------------------------------
+   SKELETON LOADER
+----------------------------------- */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(200, 200, 200, 0.7) 25%,
+    rgba(220, 220, 220, 0.5) 37%,
+    rgba(200, 200, 200, 0.3) 63%
+  );
+  background-size: 400% 100%;
+  animation: skeleton-loading 0.8s ease infinite;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* DARK MODE SKELETON */
+.dark .skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(70, 70, 70, 0.3) 25%,
+    rgba(100, 100, 100, 0.6) 37%,
+    rgba(70, 70, 70, 0.3) 63%
+  );
+  background-size: 400% 100%;
+}
+
+
+/* -----------------------------------
+   FADE IN
+----------------------------------- */
+@keyframes fadeInClean {
+  0% { opacity: 0; transform: scale(0.97); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeInClean 0.25s ease-out both;
+}
+
+
+/* -----------------------------------
+   SCALE IN POPUP
+----------------------------------- */
+@keyframes scaleInClean {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-scaleIn {
+  animation: scaleInClean 0.25s ease-out both;
+}
+
+
+/* -----------------------------------
+   SOFT POPUP ANIMATION
+----------------------------------- */
+@keyframes smoothScaleIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.smoothScaleIn {
+  animation: smoothScaleIn 0.2s ease-out both;
+}
+
+
+/* -----------------------------------
+   SLOW SPIN (for loaders)
+----------------------------------- */
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spinSlow {
+  animation: spinSlow 1.3s linear infinite;
+}
+
+
+/* -----------------------------------
+   SOFT BREATHING TEXT
+----------------------------------- */
+@keyframes pulseSoft {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-1px); }
+}
+
+.animate-pulseSoft {
+  animation: pulseSoft 1.4s ease-in-out infinite;
+}
